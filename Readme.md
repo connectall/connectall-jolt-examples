@@ -11,10 +11,10 @@
   * [remove](#remove)
   * [modify-overwrite-beta](#modify-overwrite-beta)
   * [modify-default-beta](#modify-default-beta)
-* [Functions](#Functions)
-  * [List](#List%20Functions)
-  * [String](#String%20Functions)
-  * [Type casting](#Type%20casting%20Funcations)
+* [Functions](#jolt-functions)
+  * [List](#list-functions)
+  * [String](#string-functions)
+  * [Type casting](#type-casting-functions)
 
 ## Overview
 
