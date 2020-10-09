@@ -4,14 +4,14 @@
 
 ## Table of contents
 * [Overview](#Overview)
-* [Structure](#Jolt%20Structure)
-* [Operations](#Jolt%20Operations)  
- * [shift](#shift)
- * [default](#default)
- * [remove](#remove)
- * [modify-overwrite-beta](#modify-overwrite-beta)
- * [modify-default-beta](#modify-default-beta)
-* [Functions](#Jolt%20Functions)
+* [Structure](#Structure)
+* [Operations](#Operations)  
+  * [shift](#shift)
+  * [default](#default)
+  * [remove](#remove)
+  * [modify-overwrite-beta](#modify-overwrite-beta)
+  * [modify-default-beta](#modify-default-beta)
+* [Functions](#Functions)
   * [List](#List%20Functions)
   * [String](#String%20Functions)
   * [Type casting](#Type%20casting%20Funcations)
@@ -20,7 +20,7 @@
 
 ConnectALL universal adapter provides JOLT, Groovy language options for converting a JSON document to and from its API structures. Groovy language provides a more sophisticated option for developers, while JOLT is aimed at users who may not having the programming background. The easy to use syntax of JOLT will help anyone with a basic knowledge of REST api and JSON structures to create new integrations using ConnectALL in a matter of hours.
 
-## JOLT Structure
+## Structure
 
 JOLT specification contains an Array of Operations that are used to transform the input. Each operation is a JSON object with 2 attributes `operation` contains JOLT operation to be performed, and `spec` contains a JSON object with instructions to use for transforming the content.  
 
@@ -42,7 +42,7 @@ Example:
 ]
 ```
 
-## JOLT Operations
+## Operations
 
 JOLT operation library is continually growing for handling a variety of scenarios, defined under are a list of operations that are frequently used in writing the specifications by ConnectALL Universal adapter.
 
