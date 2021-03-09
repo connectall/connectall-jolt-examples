@@ -62,6 +62,7 @@ Shift operations uses several wildcard characters, the examples below cover a co
 |`&`| predominantly used in RHS, means use the same value as the attribute key captured by `*`|
 |`@`/`@(3,attr1)`| can be used in LHS or RHS, means replace with the value of the attribute in the Input. When used in complex form the operation will go up 3 levels and capture the value of the `attr1` attribute|
 |`#`| used in the LHS keys, to set a default value |
+|`[#level]`| used in RHS to store the result in an array |
 |`$`/`$(0)`| used in the LHS to specify copy the attribute name as value in Output. Index in the paranthesis will aid in navigating to upper level|
 
 
@@ -96,6 +97,15 @@ In this example we will try extend the use of wildcard characters from the above
 |Spec|```[{"operation":"shift","spec":{"fields":{"Version":"Affect-&","*":"Details.&"}}}]```|
 |Output| ```{"Affect-Version":"0.0.4","Details":{"ProjectId":"Projects-2","ChannelId":"Channels-2","ReleaseNotes":"0.0.4 release for test","IgnoreChannelRules":true}}```|
 
+**Example 4**
+
+In this example we will move fields from a single object into an array.
+
+| Type | Spec |
+| ----- | --- |
+|Input | ```{"fields": {"summary": "Test for API creation 2","description": "Test for API creation 2","priority": "1","modifiedTime": "01-04-2019 11:46:30.124","severity": "2","status": "Open"}}``` |
+|Spec|```[{"operation": "shift","spec": {"fields": {"*": "card.[#2].&"}}}]```|
+|Output| ```{  "card": [    {      "summary": "Test for API creation 2",      "description": "Test for API creation 2",      "priority": "1",      "modifiedTime": "01-04-2019 1:46:30.124",      "severity": "2",      "status": "Open"    }  ]}```|
 
 ### default
 
